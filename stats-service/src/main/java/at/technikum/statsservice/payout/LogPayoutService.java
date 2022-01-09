@@ -28,6 +28,7 @@ public class LogPayoutService implements AuthorClicksPayoutService {
             .stream()
             .map(AuthorClicks::getViews)
             .mapToInt(Integer::intValue)
+            .map(x -> x * pricePerClick)
             .sum()
         )
       );
