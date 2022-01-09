@@ -1,0 +1,98 @@
+GET http://localhost:8080/api/blogs/resources/authors
+
+###
+
+GET http://localhost:8080/api/blogs/resources/sights
+
+###
+
+POST http://localhost:8080/api/blogs/resources/blogPosts
+Content-Type: application/json
+
+{
+  "headline": "Imperiales Erbe authentisch erleben!",
+  "fullText": "Das Schloss Schönbrunn ist die beliebteste Sehenswürdigkeit in Wien.",
+  "publicationDate": "2022-01-01",
+  "sight": {
+    "id": 2,
+    "location": "Wien",
+    "name": "Schönbrunn"
+  },
+  "author": {
+    "id": 1,
+    "firstName": "Max",
+    "lastName": "Mustermann"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/blogs/resources/blogPosts
+Content-Type: application/json
+
+{
+  "headline": "Was ein Schloss!",
+  "fullText": "Die Attraktion im Westen!",
+  "publicationDate": "2022-01-01",
+  "sight": {
+    "id": 5,
+    "location": "Salzburg",
+    "name": "Festung Salzburg"
+  },
+  "author": {
+    "id": 2,
+    "firstName": "Hans",
+    "lastName": "Huber"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/blogs/resources/blogPosts
+Content-Type: application/json
+
+{
+  "headline": "Winter Wonderland",
+  "fullText": "Lassen Sie sich von Hallstatt verzaubern!",
+  "publicationDate": "2022-01-01",
+  "sight": {
+    "id": 6,
+    "location": "Halstatt",
+    "name": "Halstatt"
+  },
+  "author": {
+    "id": 4,
+    "firstName": "Andreas",
+    "lastName": "Schuster"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/blogs/resources/blogPosts
+Content-Type: application/json
+
+{
+  "headline": "Der Stephansdom braucht Sie!",
+  "fullText": "Jährlich werden etwa 2,2 Millionen Euro für die Instandhaltungsarbeiten benötigt. Nur mit Ihrer Unterstützung können wir unser Wahrzeichen vor Umwelteinflüssen schützen – indem wir ihn laufend restaurieren und konservieren.",
+  "publicationDate": "2022-01-01",
+  "sight": {
+    "id": 1,
+    "location": "Wien",
+    "name": "Stephansdom"
+  },
+  "author": {
+    "id": 3,
+    "firstName": "Gerhard",
+    "lastName": "Müller"
+  }
+}
+
+###
+GET http://localhost:8080/api/blogs/resources/blogPosts/1
+###
+GET http://localhost:8080/api/blogs/resources/blogPosts/2
+###
+GET http://localhost:8080/api/blogs/resources/blogPosts/3
+###
+GET http://localhost:8080/api/blogs/resources/blogPosts/4

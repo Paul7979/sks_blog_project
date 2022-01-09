@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/stats/topSights/1
+
+###
+
+GET http://localhost:8080/api/stats/allSights
+
+###
+
+GET http://localhost:8080/api/stats/allSights/2022-01-07
+
+###
+
+GET http://localhost:8080/api/stats/simulatePayout
+

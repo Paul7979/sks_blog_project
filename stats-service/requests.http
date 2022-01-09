@@ -1,0 +1,14 @@
+GET http://localhost:8081/stats/topSights/1
+
+###
+
+GET http://localhost:8081/stats/allSights
+
+###
+
+GET http://localhost:8081/stats/allSights/2022-01-09
+
+###
+
+GET http://localhost:8081/stats/simulatePayout
+

@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: blog-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    #show-sql: true
+
+  jackson:
+    default-property-inclusion: non_empty
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:29092
+          auto-add-partitions: true
+      bindings:
+        output:
+          destination: blogposts.views   # topic is automatically created in Kafka
+          content-type: application/json
+          producer:
+            partition-count: 10
+
+server:
+  port: 0
+
+eureka:
+  client:
+    #    register-with-eureka: true
+    #    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
